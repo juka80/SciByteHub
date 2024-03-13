@@ -61,10 +61,12 @@ main {
 .main-content h1 {
     font-size: 3em; /* Adjust as needed */
     margin-bottom: 0.5em;
+    margin-left: -400px;
 }
 
 .main-content p {
     margin-bottom: 1em;
+    margin-left: -400px;
 }
 
 .join-us {
@@ -80,15 +82,18 @@ main {
     border-radius: 1px;
     cursor: pointer;
     font-family: Garet;
+    position: relative; /* Dodano pozycjonowanie względne */
+    top: 200px; /* Przesuwa w dół */
+    left: -500px; /* Przesuwa w lewo */
 }
+
 
 .snake-illustration {
     position: absolute;
-    right: 0;
+    right: 400px;
     bottom: 0;
-    width: 400px; /* Adjust as needed */
+    width: 300px; /* Adjust as needed */
     height: auto;
-    background: url('snake-illustration.png') no-repeat right bottom;
     background-size: contain;
 }
 
