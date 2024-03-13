@@ -4,12 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strona główna</title>
+    <title>SciByteHub</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>SciByteHub</h1>
-    <p>Tutaj możesz znaleźć informacje o naszych działaniach.</p>
-    <img src="{% static 'images/logo.png' %}" alt="Logo koła">
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="SciByteHub Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">STRONA GŁÓWNA</a></li>
+                    <li><a href="#">WARSZTATY</a></li>
+                    <li><a href="#">O NAS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-content">
+                <h1>Witaj na stronie naszego koła!</h1>
+                <p>Lol robimy cos w pythonie i data science ogólnie, jest super.</p>
+                <button class="join-us">DOŁĄCZ DO NAS</button>
+            </div>
+            <div class="snake-illustration">
+                <!-- Your snake illustration here -->
+            </div>
+        </main>
+        <footer>
+            <div class="social-media">
+                <a href="#" class="facebook"></a>
+                <a href="#" class="twitter"></a>
+                <a href="#" class="instagram"></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
+
