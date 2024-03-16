@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/garet');
+        @import url('https://fonts.cdnfonts.com/css/telegraf');
+
+        /* Tutaj wklej swój kod CSS */
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Reszta twojego kodu CSS */
+        .container button {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        a:link, a:visited, a:hover, a:active {
+            text-decoration: none !important;
+        }
+
+        #logo img {
+            float: left; /* Logo w lewym górnym rogu */
+            margin-left: 0px;
+            margin-top: 0px;
+            width: 120px; /* Szerokość logo */
+            height: 140px; 
+        }
+
+
+
+        #logo span {
+            line-height: 150px; /* Wysokość lini tekstu, dostosowana do wysokości logo */
+            font-family: 'telegraf', sans-serif; /* Ustawienie czcionki dla napisu przy logo */
+            font-weight: bold;
+            font-size: 30px;
+            margin-left: 15px;
+            color: white; /* Zmiana koloru tekstu na biały */
+            text-decoration: none; /* Usunięcie podkreślenia */
+        }
+
+        #logo span:hover {
+            opacity: 0.8; /* Zmniejszenie przejrzystości po najechaniu */
+        }
+
+        #logo span:active {
+            color: #e5e900; /* Zmiana koloru po kliknięciu */
+        }
+
+
+
+        #menu {
+            margin-top: -95px;
+            margin-right: 200px; /* Margines z prawej strony */
+            text-align: center; /* Wyśrodkowanie tekstów przycisków w prawej stronie */
+        }
+
+        #menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px; /* Dodatkowy margines z lewej strony */
+            margin: 0 60px; /* Zwiększenie marginesów wewnątrz przycisków */
+            font-family: Garet, sans-serif; /* Konkretna czcionka */
+            font-size: 25px; /* Rozmiar czcionki */
+            transition: opacity 0.3s ease; /* Płynne przejścia */
+        }
+
+        #menu a:hover {
+            opacity: 0.8; /* Zmniejszenie przejrzystości po najechaniu */
+        }
+
+        #menu a:active {
+            color: #e5e900; /* Zmiana koloru po kliknięciu */
+        }
+
+        #logo {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="home.html" id="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Logo">
+        <span>SciByteHub</span>
+    </a>
+    <div id="menu">
+        <a href="onas.html">O nas</a>
+        <a href="kursy.html">Kursy</a>
+        <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+</body>
+</html>
