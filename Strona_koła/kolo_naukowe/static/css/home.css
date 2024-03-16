@@ -1,0 +1,101 @@
+.main-heading {
+    font-size: 45px;
+    color: #ffffff; /* Kolor tekstu */
+    margin-top: 180px;
+    margin-left: 60px;
+    white-space: normal; /* Pozwala na łamanie linii */
+    width: 1000px; /* Szerokość kontenera, w którym ma być wyświetlany tekst */
+}
+
+/* Styl dla akapitu p */
+.sub-heading {
+    font-size: 30px;
+    color: #ffffff; /* Kolor tekstu */
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+
+.join-button {
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 2px;
+    border: 4px solid #e5e900; /* Dodajemy ramkę */
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 120px;
+    position: relative; /* Ustawiamy pozycję na relative */
+    top: 60px; /* Przesuwamy przycisk w dół o 20 pikseli */
+}
+
+.join-button:hover {
+    opacity: 80%;
+}
+
+.join-button:active {
+    background-color:#e5e900;
+}
+
+.plant-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: auto;
+}
+
+/* Stylowanie dla obrazka węża Pythona */
+.python-image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 600px;
+    height: auto;
+    margin-right: 70px;
+    margin-top: 40px;
+}
+
+.social-media {
+    display: flex; /* Ustawiamy flexbox, który pozwoli nam na lepsze ustawienie elementów */
+    align-items: center; /* Centrujemy elementy pionowo */
+    justify-content: space-between; /* Rozkładamy elementy równomiernie w kontenerze */
+    margin-top: 170px; /* Odstęp od górnej części kontenera */
+    width: 600px;
+    gap: 16px;
+    padding: 0 80px;
+}
+
+
+.horizontal {
+    width: 250px;
+    border-top: solid 2px white;
+    height: 1px;
+    opacity: 0.5;
+}
+
+.social-media p {
+    font-weight: bold;
+    white-space:nowrap;
+    overflow: hidden;
+}
+
+
+.social-icon {
+    width: 24px; /* Możesz dostosować do preferowanej wielkości ikon */
+    height: auto;
+    
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0px;
+}
+
+.social-link {
+    display: inline-block; /* Wyświetlamy linki w lini */
+}
+
