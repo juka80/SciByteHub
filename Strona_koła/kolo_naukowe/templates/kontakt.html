@@ -1,3 +1,16 @@
-<!DOCTYPE html>
-<body>kontakt</body>
-</html>
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="contact-section">
+  <h1>Kontakt</h1>
+  <p>Skontaktuj się z nami:</p>
+  <ul>
+    <li>Email: scibytehub@proton.me</li>
+    <li>
+      Adres: Wydział Chemii Uniwersytetu Gdańskiego, Wita Stwosza 63, 80-308
+      Gdańsk
+    </li>
+  </ul>
+</div>
+
+<link rel="stylesheet" href="{% static 'css/kontakt.css' %}" />
+{% endblock content %}
