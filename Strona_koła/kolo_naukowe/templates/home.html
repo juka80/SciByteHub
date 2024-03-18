@@ -1,36 +1,45 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
 <div id="content">
-    <h1 class="main-heading">
-        SciByteHub - Twoja przestrzeń do kreatywnego eksplorowania danych i tworzenia innowacyjnych rozwiązań
-    </h1>
+  <div class="main-section">
+    <div class="heading">
+      <h1 class="main-heading">
+        SciByteHub - Twoja przestrzeń do kreatywnego eksplorowania danych i
+        tworzenia innowacyjnych rozwiązań
+      </h1>
 
-    <p class="sub-heading">
+      <p class="sub-heading">
         Lol robimy cos w pythonie i r i data science ogolnie, jest super.
-    </p>
-
-    <a href="#" class="join-button">Dołącz do nas</a> <!-- Dodajemy przycisk "Dołącz do nas" -->
-
-    <div class="images-container"> <!-- Kontener na obrazy -->
-        <img src="{% static 'images/plant.png' %}" alt="Plant Image" class="plant-image">
-        <img src="{% static 'images/pyton.png' %}" alt="Python Image" class="python-image">
+      </p>
     </div>
+    <a href="#" class="join-button">Dołącz do nas</a>
+  </div>
+
+  <div class="images-container">
+    <img
+      src="{% static 'images/pyton.png' %}"
+      alt="Python Image"
+      class="python-image"
+    />
+  </div>
 </div>
 
 <div class="social-media">
-    <p>MEDIA SPOŁECZNOŚCIOWE</p>
-    <div class= 'horizontal' ></div>
-    <div class = 'social-icons'>
-        <a href="#" class="social-link"><img src="{% static 'images/facebook.png' %}" alt="Facebook" class="social-icon"></a>
-        <a href="#" class="social-link"><img src="{% static 'images/twitter.png' %}" alt="Twitter" class="social-icon"></a>
-        <a href="#" class="social-link"><img src="{% static 'images/instagram.png' %}" alt="Instagram" class="social-icon"></a>
-    </div>
-    
+  <p>MEDIA SPOŁECZNOŚCIOWE</p>
+  <div class="horizontal"></div>
+  <div class="social-icons">
+    <a href="#" class="social-link"
+      ><img src="{% static 'images/facebook.png' %}" alt="Facebook"
+    /></a>
+    <a href="#" class="social-link"
+      ><img src="{% static 'images/twitter.png' %}" alt="Twitter"
+    /></a>
+    <a href="#" class="social-link"
+      ><img src="{% static 'images/instagram.png' %}" alt="Instagram"
+    /></a>
+  </div>
 </div>
 
-
-<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/home1.css' %}" />
 
 {% endblock content %}
