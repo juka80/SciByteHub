@@ -4,27 +4,26 @@
 /* Global styles */
 
 /* Remove any existing .container styles and replace with this: */
-#logo {
+/* #logo {
   position: fixed;
   top: 16px;
   left: 16px;
-}
+} */
 
-#logo img {
-  width: 80%;
-}
+/* #logo img {
+  width: 100%;
+} */
 
 /* Menu link styles */
-#menu {
-  margin-left: 150px; /* Dostosuj wartość marginesu, aby umieścić menu obok logo */
-}
+/* #menu {
+  margin-left: 150px;} /* Dostosuj wartość marginesu, aby umieścić menu obok logo */
 
-#menu a {
+/* #menu a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
   font-weight: bold;
-}
+} */
 
 #content {
   display: flex;

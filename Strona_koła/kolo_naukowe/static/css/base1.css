@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0; /* Niewielki padding na górze/dole i po bokach */
+  padding: 0;
 }
 
 #logo {
@@ -29,6 +29,9 @@ body {
   position: absolute;
   align-items: center;
   text-decoration: none; /* Usuwa podkreślenie z linku */
+  position: fixed;
+  top: 16px;
+  left: 16px;
 }
 
 #logo img {
@@ -66,6 +69,7 @@ body {
   font-size: 28px;
   color: #ffffff;
   padding: 0 5%; /* To doda odstęp z lewej i prawej strony każdego linku */
+  font-weight: bold;
 }
 
 #menu a:hover {

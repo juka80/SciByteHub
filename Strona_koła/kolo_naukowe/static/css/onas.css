@@ -1,0 +1,30 @@
+.describe {
+  margin-top: 100px; /* Odstęp od góry */
+  width: 75%; /* Maksymalna szerokość sekcji */
+  margin-left: auto; /* Centrowanie sekcji */
+  margin-right: auto; /* Centrowanie sekcji */
+  overflow-wrap: break-word; /* Zawijanie tekstu */
+}
+
+.describe p {
+  font-size: 20px; /* Rozmiar czcionki */
+  line-height: 1.8; /* Wysokość wiersza */
+  margin-bottom: 15px; /* Odstęp między paragrafami */
+}
+
+.describe p:first-child {
+  font-weight: bold; /* Pogrubienie pierwszego paragrafu */
+}
+
+.roles {
+  margin-top: 48px; /* Dodatkowy odstęp między grupami */
+}
+
+.roles p {
+  margin-bottom: 10px; /* Dodatkowy odstęp między paragrafami w grupie */
+}
+
+.roles.leadership p:last-child,
+.roles.assistant p:last-child {
+  margin-bottom: 0; /* Zerowy odstęp dla ostatniego paragrafu w każdej grupie */
+}

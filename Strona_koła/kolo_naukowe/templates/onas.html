@@ -1,3 +1,37 @@
-<!DOCTYPE html>
-<body>o nas</body>
-</html>
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="section-header">
+  <h2>O Nas</h2>
+</div>
+
+<div class="describe">
+  <p>
+    Jesteśmy sekcją Digital Chemistry, innowacyjną częścią Naukowego Koła
+    Chemików Uniwersytetu Gdańskiego, założoną w 2024 roku. Zajmujemy się
+    głównie działalnością naukową w obszarze analizy danych i chemii
+    obliczeniowej, wykorzystując zaawansowane algorytmy i techniki uczenia
+    maszynowego. Ponadto, jesteśmy głęboko zaangażowani w działalność
+    edukacyjną, oferując autorskie kursy programowania. Nasze kursy są
+    zaprojektowane tak, aby wyposażyć studentów i młodych naukowców w
+    umiejętności niezbędne do pracy w dynamicznie rozwijającym się świecie nauki
+    i technologii.
+  </p>
+  <p>
+    W SciByteHub wierzymy w moc współpracy. Jesteśmy otwarci na nowe projekty,
+    partnerstwa oraz wymianę wiedzy z innymi organizacjami naukowymi,
+    akademickimi, a także przedsiębiorstwami. Zapraszamy do kontaktu. Razem
+    możemy tworzyć przyszłość nauki.
+  </p>
+</div>
+
+<div class="roles leadership">
+  <p>Przewodnicząca sekcji: Julia Kuligowska</p>
+  <p>Wiceprzewodnicząca sekcji: Marta Pągielska</p>
+</div>
+
+<div class="roles assistant">
+  <p>Opiekun sekcji: prof. dr. hab. Cezary Czaplewski</p>
+  <p>Opiekun pomocniczy: mgr Annemarie Danielsson</p>
+</div>
+
+<link rel="stylesheet" href="{% static 'css/onas.css' %}" />
+{% endblock content %}

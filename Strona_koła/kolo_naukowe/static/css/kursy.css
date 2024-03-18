@@ -1,0 +1,42 @@
+.course-section {
+  display: flex; /* Ustawia kontener na flex */
+  flex-direction: column; /* Elementy wewnątrz kontenera będą ułożone pionowo */
+  justify-content: flex-end;
+  height: 480px; /* Wyrównuje elementy do dołu kontenera */
+  margin-left: 32px;
+  font-size: 24px;
+}
+
+.sign-up-button {
+  background-color: #000000;
+  width: 180px;
+  color: #ffffff;
+  padding: 24px;
+  line-height: 0px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  border: solid;
+  border-color: #e5e900;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  margin-top: 30px;
+}
+
+.sign-up-button:hover {
+  opacity: 0.8; /* 30% opacity po najechaniu */
+}
+
+.sign-up-button:active {
+  background-color: #e5e900; /* Zmiana koloru po kliknięciu */
+}
+
+.course-start-date {
+  font-size: 28px;
+}
+
+.course-details {
+  margin-top: 12px;
+}
