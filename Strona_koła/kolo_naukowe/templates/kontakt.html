@@ -7,6 +7,22 @@
     margin: 0;
     padding: 0;
   }
+  
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   .flex-container {
     display: flex;
@@ -41,12 +57,16 @@
     color: #4b76bb;
   }
 
+.icon, .flex-item p {
+    animation: fadeInUp 1s ease-out forwards;
+    }
   .main-title {
     text-align: center;
     font-size: 32px;
     font-weight: bold;
-    margin-top: 80px; /* Dodajemy margines górny dla tytułu */
-    color: rgb(225, 231, 69); /* Kolor tekstu */
+    margin-top: 80px;
+    color: rgb(225, 231, 69);
+    animation: fadeIn 1.5s ease-out forwards
   }
 </style>
 

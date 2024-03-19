@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<!-- Twoja zawartość -->
+<link rel="stylesheet" href="{% static 'css/kursy.css' %}" />
 <div class="course-section">
   <h2>
     </br>PYTHON
@@ -15,13 +15,10 @@
       href="https://gforms.app/p/UVlRvRS"
       class="sign-up-button"
       target="_blank"
-      >Zapisz się!</a
-    >
+      >Zapisz się!</a>
     <a href="{% url 'download_pdf' %}" class="course-button"
       >Pobierz plan kursu</a
     >
   </div>
-
-  <link rel="stylesheet" href="{% static 'css/kursy.css' %}" />
-  {% endblock content %}
 </div>
+{% endblock content %}

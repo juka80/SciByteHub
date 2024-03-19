@@ -1,9 +1,35 @@
 .describe {
-  margin-top: 100px; /* Odstęp od góry */
-  width: 75%; /* Maksymalna szerokość sekcji */
-  margin-left: auto; /* Centrowanie sekcji */
-  margin-right: auto; /* Centrowanie sekcji */
-  overflow-wrap: break-word; /* Zawijanie tekstu */
+  display: flex; /* Ustawienie trzech kolumn obok siebie */
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%; /* Pełna szerokość dla responsywności */
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+.column {
+  flex: 1; /* Rozdzielenie przestrzeni równo między kolumny */
+  margin: 0 10px; /* Odstępy między kolumnami */
+  opacity: 0; /* Początkowa przezroczystość dla animacji */
+  animation: slideIn 1.5s forwards; /* Animacja wjeżdżania */
+  animation-delay: 0s; /* Domyślne opóźnienie animacji, indywidualnie dostosowane inline */
+}
+
+.column-header {
+  color: rgb(225, 231, 69); /* Kolor nagłówków */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px); /* Początkowe przesunięcie */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .describe p {
@@ -25,19 +51,32 @@
   margin-bottom: 5; /* Zerowy odstęp dla ostatniego paragrafu w każdej grupie */
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .images-container {
-  display: flex; /* Ustawia kontener na flexbox */
-  justify-content: center; /* Centruje zawartość w poziomie */
-  align-items: center; /* Centruje zawartość w pionie (jeśli to potrzebne) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
-  height: auto; /* Zmieniamy na auto, aby wysokość dostosowywała się do obrazu */
+  height: auto;
+  opacity: 0; /* Startujemy z niewidocznością */
+  animation: fadeIn 2s ease-out forwards; /* Używamy tej samej animacji fadeIn */
+  animation-delay: 1.5s; /* Możesz dostosować opóźnienie, aby pasowało do reszty */
 }
 
 .python-image {
   max-width: 30%;
   max-height: 30%;
-  object-fit: contain; /* Zachowuje proporcje obrazu, nie jest konieczne do centrowania */
-  /* justify-content: center; - Ta linia jest zbędna, ponieważ dotyczy kontenera flex, a nie pojedynczego elementu */
+  object-fit: contain;
+}
+
 }
 
