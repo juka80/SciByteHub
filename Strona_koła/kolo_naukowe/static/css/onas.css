@@ -12,10 +12,6 @@
   margin-bottom: 15px; /* Odstęp między paragrafami */
 }
 
-.describe p:first-child {
-  font-weight: bold; /* Pogrubienie pierwszego paragrafu */
-}
-
 .roles {
   margin-top: 48px; /* Dodatkowy odstęp między grupami */
 }
@@ -26,5 +22,5 @@
 
 .roles.leadership p:last-child,
 .roles.assistant p:last-child {
-  margin-bottom: 0; /* Zerowy odstęp dla ostatniego paragrafu w każdej grupie */
+  margin-bottom: 10; /* Zerowy odstęp dla ostatniego paragrafu w każdej grupie */
 }
