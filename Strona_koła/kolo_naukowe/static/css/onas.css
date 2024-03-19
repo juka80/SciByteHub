@@ -13,14 +13,31 @@
 }
 
 .roles {
-  margin-top: 48px; /* Dodatkowy odstęp między grupami */
+  margin-top: 5px; /* Dodatkowy odstęp między grupami */
 }
 
 .roles p {
-  margin-bottom: 10px; /* Dodatkowy odstęp między paragrafami w grupie */
+  margin-bottom: 5px; /* Dodatkowy odstęp między paragrafami w grupie */
 }
 
 .roles.leadership p:last-child,
 .roles.assistant p:last-child {
-  margin-bottom: 10; /* Zerowy odstęp dla ostatniego paragrafu w każdej grupie */
+  margin-bottom: 5; /* Zerowy odstęp dla ostatniego paragrafu w każdej grupie */
 }
+
+.images-container {
+  display: flex; /* Ustawia kontener na flexbox */
+  justify-content: center; /* Centruje zawartość w poziomie */
+  align-items: center; /* Centruje zawartość w pionie (jeśli to potrzebne) */
+  margin-left: auto;
+  margin-right: auto;
+  height: auto; /* Zmieniamy na auto, aby wysokość dostosowywała się do obrazu */
+}
+
+.python-image {
+  max-width: 30%;
+  max-height: 30%;
+  object-fit: contain; /* Zachowuje proporcje obrazu, nie jest konieczne do centrowania */
+  /* justify-content: center; - Ta linia jest zbędna, ponieważ dotyczy kontenera flex, a nie pojedynczego elementu */
+}
+
