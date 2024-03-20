@@ -167,3 +167,48 @@
   transform: translateY(20px);
 }
 
+@media (max-width: 768px) {
+  #content {
+    flex-direction: column; /* Układ elementów jeden pod drugim */
+    align-items: center; /* Centrowanie elementów */
+    margin-top: 100px; /* Zmniejszenie marginesu górnego */
+  }
+
+  .main-heading {
+    font-size: 48px; /* Zmniejszenie rozmiaru czcionki dla nagłówka */
+    margin-top: 2rem; /* Dostosowanie marginesu górnego */
+  }
+
+  .sub-heading {
+    font-size: 18px; /* Zmniejszenie rozmiaru czcionki dla podtytułu */
+    margin-bottom: 1.5rem; /* Dostosowanie marginesu dolnego */
+  }
+
+  .join-button, .course-button {
+    width: auto; /* Dostosowanie szerokości przycisków */
+    padding: 12px 24px; /* Zmniejszenie paddingu */
+    font-size: 16px; /* Zmniejszenie rozmiaru czcionki */
+    margin: 1rem 0; /* Dostosowanie marginesów */
+  }
+
+  .python-image {
+    max-width: 100%; /* Dostosowanie maksymalnej szerokości obrazu */
+    max-height: auto; /* Dostosowanie wysokości */
+    margin-right: 0; /* Usunięcie marginesu prawego */
+  }
+
+  .social-icons a {
+    font-size: 24px; /* Dostosowanie rozmiaru ikon */
+    margin: 0 8px; /* Zmniejszenie odstępów między ikonami */
+  }
+
+  .social-media {
+    flex-direction: column; /* Zmiana układu ikon na pionowy */
+    gap: 10px; /* Zmniejszenie odstępu */
+  }
+  
+  .horizontal {
+    margin: 10px 0; /* Dostosowanie marginesów dla linii */
+  }
+}
+
