@@ -1,10 +1,28 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .course-section {
   display: flex; /* Ustawia kontener na flex */
   flex-direction: column; /* Elementy wewnątrz kontenera będą ułożone pionowo */
   justify-content: flex-end;
   height: 480px; /* Wyrównuje elementy do dołu kontenera */
   margin-left: 32px;
-  font-size: 24px;
+  font-size: 20px;
+  margin-top: 48px;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .sign-up-button {
@@ -58,3 +76,4 @@
 .course-details {
   margin-top: 12px;
 }
+

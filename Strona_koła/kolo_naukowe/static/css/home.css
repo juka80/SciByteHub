@@ -33,15 +33,34 @@
   width: 100%;
   height: 50vh;
 }
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .main-heading {
-  /* font-size: 36px;
-  margin-top: 15rem; */
+  font-size: 90px;
+  margin-top: 5rem;
 }
 
 .sub-heading {
   font-size: 24px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .join-button {
@@ -72,12 +91,12 @@
 
 /* Images container */
 .images-container {
-  height: 100%;
+  height: 120%;
 }
 
 .main-section {
   margin-left: 24px;
-  margin-top: 24px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -87,8 +106,8 @@
 }
 
 .python-image {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 120%;
+  max-height: 120%;
   object-fit: contain;
   margin-right: 120px;
 }
@@ -121,3 +140,75 @@
   max-height: 100%;
   object-fit: contain;
 }
+
+/* Zastosuj animacje do elementów */
+.main-heading, .sub-heading {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.join-button {
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.5s; /* Lekkie opóźnienie, aby animacja była płynna i sekwencyjna */
+}
+
+.python-image {
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 1s; /* Zwiększone opóźnienie dla obrazu */
+}
+
+.social-icons a {
+  animation: fadeInUp 1.2s ease-out forwards;
+  animation-delay: 1.2s; /* Animacja ikon mediów społecznościowych */
+}
+
+/* Początkowe stany elementów przed animacją */
+.main-heading, .sub-heading, .join-button, .python-image, .social-icons a {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@media (max-width: 768px) {
+  #content {
+    flex-direction: column; /* Układ elementów jeden pod drugim */
+    align-items: center; /* Centrowanie elementów */
+    margin-top: 100px; /* Zmniejszenie marginesu górnego */
+  }
+
+  .main-heading {
+    font-size: 48px; /* Zmniejszenie rozmiaru czcionki dla nagłówka */
+    margin-top: 2rem; /* Dostosowanie marginesu górnego */
+  }
+
+  .sub-heading {
+    font-size: 18px; /* Zmniejszenie rozmiaru czcionki dla podtytułu */
+    margin-bottom: 1.5rem; /* Dostosowanie marginesu dolnego */
+  }
+
+  .join-button, .course-button {
+    width: auto; /* Dostosowanie szerokości przycisków */
+    padding: 12px 24px; /* Zmniejszenie paddingu */
+    font-size: 16px; /* Zmniejszenie rozmiaru czcionki */
+    margin: 1rem 0; /* Dostosowanie marginesów */
+  }
+
+  .python-image {
+    max-width: 100%; /* Dostosowanie maksymalnej szerokości obrazu */
+    max-height: auto; /* Dostosowanie wysokości */
+    margin-right: 0; /* Usunięcie marginesu prawego */
+  }
+
+  .social-icons a {
+    font-size: 24px; /* Dostosowanie rozmiaru ikon */
+    margin: 0 8px; /* Zmniejszenie odstępów między ikonami */
+  }
+
+  .social-media {
+    flex-direction: column; /* Zmiana układu ikon na pionowy */
+    gap: 10px; /* Zmniejszenie odstępu */
+  }
+  
+  .horizontal {
+    margin: 10px 0; /* Dostosowanie marginesów dla linii */
+  }
+}
+

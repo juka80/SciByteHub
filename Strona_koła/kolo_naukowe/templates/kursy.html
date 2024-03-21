@@ -1,27 +1,25 @@
 {% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/kursy.css' %}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="course-section">
   <h2>
-    Obecnie prowadzimy zapisy na kurs programowania w języku Python dla
-    początkujących.
+    </br>PYTHON
   </h2>
-  <p class="course-start-date">Startujemy 26 marca.</p>
+  <p class="course-start-date">Obecnie prowadzimy zapisy na kurs programowania w języku Python dla początkujących. Startujemy 26 marca.</p>
   <div class="course-details">
-    <p>Kiedy: wtorki 17:00-19:00</p>
-    <p>Gdzie: Wydział Chemii UG</p>
-    <p>Czas trwania: 26.03-11.06.2024</p>
-    <p>Poziom kursu: od podstaw</p>
-    <p>Koszt: bezpłatny dla studentów UG</p>
+    <p><b>Kiedy:</b> wtorki 17:00-19:00</p>
+    <p><b>Gdzie:</b> Wydział Chemii UG</p>
+    <p><b>Czas trwania:</b> 26.03-11.06.2024</p>
+    <p><b>Poziom kursu:</b> od podstaw</p>
+    <p><b>Koszt:</b> bezpłatny dla studentów UG</p>
     <a
       href="https://gforms.app/p/UVlRvRS"
       class="sign-up-button"
       target="_blank"
-      >Zapisz się!</a
-    >
+      >Zapisz się!</a>
     <a href="{% url 'download_pdf' %}" class="course-button"
       >Pobierz plan kursu</a
     >
   </div>
-
-  <link rel="stylesheet" href="{% static 'css/kursy.css' %}" />
-  {% endblock content %}
 </div>
+{% endblock content %}

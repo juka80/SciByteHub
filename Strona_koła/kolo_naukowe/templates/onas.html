@@ -1,27 +1,12 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<div class="section-header">
-  <h2>O Nas</h2>
-</div>
+<link rel="stylesheet" href="{% static 'css/onas.css' %}" />
 
 <div class="describe">
-  <p>
-    Jesteśmy sekcją Digital Chemistry, innowacyjną częścią Naukowego Koła
-    Chemików Uniwersytetu Gdańskiego, założoną w 2024 roku. Zajmujemy się
-    głównie działalnością naukową w obszarze analizy danych i chemii
-    obliczeniowej, wykorzystując zaawansowane algorytmy i techniki uczenia
-    maszynowego. Ponadto, jesteśmy głęboko zaangażowani w działalność
-    edukacyjną, oferując autorskie kursy programowania. Nasze kursy są
-    zaprojektowane tak, aby wyposażyć studentów i młodych naukowców w
-    umiejętności niezbędne do pracy w dynamicznie rozwijającym się świecie nauki
-    i technologii.
+  <div class="column" style="animation-delay: 0s;">
+    <h2 class="column-header">O NAS</h2>
+	<p>
+    Jesteśmy sekcją Digital Chemistry, energicznie rozwijającą się częścią Naukowego Koła Chemików Uniwersytetu Gdańskiego, powstałą w 2024 roku.
   </p>
-  <p>
-    W SciByteHub wierzymy w moc współpracy. Jesteśmy otwarci na nowe projekty,
-    partnerstwa oraz wymianę wiedzy z innymi organizacjami naukowymi,
-    akademickimi, a także przedsiębiorstwami. Zapraszamy do kontaktu. Razem
-    możemy tworzyć przyszłość nauki.
-  </p>
-</div>
 
 <div class="roles leadership">
   <p>Przewodnicząca sekcji: Julia Kuligowska</p>
@@ -33,5 +18,27 @@
   <p>Opiekun pomocniczy: mgr Annemarie Danielsson</p>
 </div>
 
-<link rel="stylesheet" href="{% static 'css/onas.css' %}" />
+  </div>
+  <div class="column" style="animation-delay: 0.5s;">
+    <h2 class="column-header">MISJA</h2>
+    <p>
+      Nasz główny cel to zgłębianie tajników danych i chemii za pomocą zaawansowanych technologii, takich jak sztuczna inteligencja i uczenie maszynowe. Ale to nie wszystko! Jesteśmy także pasjonatami edukacji - oferujemy kursy programowania dla wszystkich, którzy chcą lepiej zrozumieć świat nauki i technologii. Nasze szkolenia są zaprojektowane w sposób przystępny, aby wyposażyć młodych entuzjastów nauki w umiejętności niezbędne do osiągnięcia sukcesu w dzisiejszym świecie.
+    </p>
+  </div>
+  <div class="column" style="animation-delay: 1s;">
+    <h2 class="column-header">WSPÓŁPRACA</h2>
+    <p>
+      W SciByteHub wierzymy w siłę współpracy! Jesteśmy otwarci na nowe pomysły, partnerstwa oraz na dzielenie się wiedzą z innymi instytucjami naukowymi, uczelniami i firmami. Chcesz coś wspólnie z nami stworzyć? Nie czekaj - daj nam znać! Razem możemy zdziałać naprawdę wielkie rzeczy.
+    </p>
+  </div>
+</div>
+
+  <div class="images-container">
+    <img
+      src="{% static 'images/logo-ug.png' %}"
+      alt="Python Image"
+      class="python-image"
+    />
+  </div>
+
 {% endblock content %}

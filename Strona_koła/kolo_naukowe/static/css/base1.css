@@ -31,7 +31,7 @@ body {
   text-decoration: none; /* Usuwa podkreślenie z linku */
   position: fixed;
   top: 16px;
-  left: 16px;
+  left: 24px;
 }
 
 #logo img {
@@ -91,3 +91,51 @@ body {
   margin-right: -24px;
   width: 250px;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px; /* Zmniejszony padding dla całego ciała dokumentu */
+  }
+
+  #logo {
+    top: 10px;
+    left: 10px;
+  }
+
+  #logo img {
+    max-height: 10vh; /* Zmniejszenie wysokości logo */
+  }
+
+  #logo span {
+    font-size: 2.5vh; /* Zmniejszenie rozmiaru czcionki dla nazwy */
+  }
+
+  #menu {
+    flex-direction: column; /* Zmiana układu menu na pionowy */
+    gap: 20px; /* Zmniejszenie odstępu między linkami */
+    margin-top: 50px; /* Dostosowanie marginesu górnego */
+    padding-top: 60px; /* Dostosowanie paddingu górnego, aby nie nakładać się na logo */
+  }
+
+  #menu a {
+    font-size: 24px; /* Zmniejszenie rozmiaru czcionki dla linków w menu */
+    padding: 10px 0; /* Dostosowanie paddingu dla lepszej czytelności na urządzeniach mobilnych */
+  }
+
+  .plant-image-container {
+    width: 100px; /* Zmniejszenie szerokości kontenera obrazu */
+    margin-right: 0; /* Usunięcie marginesu prawego */
+    top: auto;
+    bottom: 20px; /* Pozycjonowanie obrazu w dolnej części ekranu */
+  }
+
+  .plant-image {
+    max-width: 100%; /* Dostosowanie maksymalnej szerokości obrazu */
+  }
+
+  .container {
+    flex-direction: column; /* Układ elementów jeden pod drugim dla kontenera głównego */
+    align-items: flex-start; /* Wyrównanie elementów do lewej */
+  }
+}
+

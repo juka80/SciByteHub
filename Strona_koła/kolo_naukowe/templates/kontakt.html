@@ -1,14 +1,90 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<div class="contact-section">
-  <h1>Skontaktuj się z nami:</h1>
-  <ul>
-    <li>Email: scibytehub@proton.me</li>
-    <li>
-      Adres: Wydział Chemii Uniwersytetu Gdańskiego, Wita Stwosza 63, 80-308
-      Gdańsk
-    </li>
-  </ul>
-</div>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-<link rel="stylesheet" href="{% static 'css/kontakt.css' %}" />
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  .flex-container {
+    display: flex;
+    justify-content: space-around; /* Zmieniamy rozmieszczenie elementów na bardziej skupione */
+    text-align: center;
+    margin-top: 120px; /* Zmniejszamy margines górny dla całego kontenera */
+  }
+
+  .flex-item {
+    flex: 0 1 45%; /* Zmiana elastyczności elementów */
+    margin: 5px;
+  }
+
+  .icon {
+    font-size: 4rem;
+    background-clip: text;
+    color: rgb(225, 231, 69);
+  }
+  
+  .flex-item p {
+    margin: 10px 0;
+    font-size: 26px;
+  }
+
+  .flex-item p.fs-5 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .flex-item p[style] {
+    font-size: 20px;
+    color: #4b76bb;
+  }
+
+.icon, .flex-item p {
+    animation: fadeInUp 1s ease-out forwards;
+    }
+  .main-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 80px;
+    color: rgb(225, 231, 69);
+    animation: fadeIn 1.5s ease-out forwards
+  }
+</style>
+
+<h1 class="main-title">SKONTAKTUJ SIĘ Z NAMI</h1>
+
+<div class="flex-container">
+  <div class="flex-item">
+    <span class="icon bi bi-chat-square-text"></span>
+    <p class="fs-5 fw-light">E-MAIL</p>
+    <p>scibytehub@proton.me</p>
+  </div>
+  <div class="flex-item">
+    <span class="icon bi bi-geo-alt"></span>
+    <p class="fs-5 fw-light">ADRES</p>
+    <p>Pokój F120</p>
+    <p>Wydział Chemii Uniwersytetu Gdańskiego<br>ul. Wita Stwosza 63<br>80-308 Gdańsk</p>
+  </div>
+</div>
 {% endblock content %}
+
+

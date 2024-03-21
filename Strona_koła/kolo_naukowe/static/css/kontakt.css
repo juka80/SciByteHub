@@ -3,6 +3,7 @@
   flex-direction: column; /* Elementy wewnątrz kontenera będą ułożone pionowo */
   justify-content: flex-end;
   height: 280px; /* Wyrównuje elementy do dołu kontenera */
+  font-size: 24px;
   margin-left: 32px;
 }
 
