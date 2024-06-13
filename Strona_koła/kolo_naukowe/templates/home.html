@@ -1,16 +1,21 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/home_test.css' %}"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+/>
 
 <div id="content">
   <div class="main-section">
     <div class="heading">
-      <h1 class="main-heading">
-        SciByteHub
-      </h1>
+      <h1 class="main-heading">SciByteHub</h1>
 
       <p class="sub-heading">
-        Data Science | Computational Chemistry |  Machine Learning
+        Data Science | Computational Chemistry | Machine Learning
       </p>
     </div>
     <a href="https://gforms.app/p/cRR93lm" class="join-button" target="_blank"
@@ -32,19 +37,35 @@
   <div class="horizontal"></div>
   <div class="social-icons">
     <a
-      href="https://www.facebook.com/profile.php?id=61557602332796"
+      href="https://www.facebook.com/profile.php?id=61557353949758"
       class="social-link"
       target="_blank"
-      ><span id="boot-icon" class="bi bi-facebook" style="font-size: 36px; color: rgb(225, 231, 69);"></span></a>
+      ><span
+        id="boot-icon"
+        class="bi bi-facebook"
+        style="font-size: 36px; color: rgb(225, 231, 69)"
+      ></span
+    ></a>
+    {% comment %}
     <a href="https://twitter.com/SciByteHub" class="social-link" target="_blank"
-      ><span id="boot-icon" class="bi bi-twitter" style="font-size: 36px; color: rgb(225, 231, 69);"></span></a>
+      ><span
+        id="boot-icon"
+        class="bi bi-twitter"
+        style="font-size: 36px; color: rgb(225, 231, 69)"
+      ></span
+    ></a>
+    {% endcomment %}
     <a
       href="https://www.instagram.com/scibytehub?igsh=NXYzam9hcnA3Mml3&utm_source=qr"
       class="social-link"
       target="_blank"
-      ><span id="boot-icon" class="bi bi-instagram" style="font-size: 36px; color: rgb(225, 231, 69);"></span></a>
+      ><span
+        id="boot-icon"
+        class="bi bi-instagram"
+        style="font-size: 36px; color: rgb(225, 231, 69)"
+      ></span
+    ></a>
   </div>
 </div>
-
 
 {% endblock content %}

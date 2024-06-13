@@ -1,12 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pl">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
-  <link rel="stylesheet" type="text/css" href="{% static 'css/base1.css' %}" />
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'images/favicon.png' %}"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <meta charset="UTF-8" />
     <title>SciByteHub</title>
   </head>
   <body>
@@ -16,6 +19,7 @@
         <span>SciByteHub</span>
       </a>
       <div id="menu">
+        <!-- Simple link for 'O nas' without dropdown -->
         <a href="{% url 'onas' %}">O nas</a>
         <a href="{% url 'kursy' %}">Kursy</a>
         <a href="{% url 'kontakt' %}">Kontakt</a>

@@ -1,119 +1,77 @@
 @import url("https://fonts.cdnfonts.com/css/garet");
 @import url("https://fonts.cdnfonts.com/css/telegraf");
 
-/* Global styles */
-
-/* Remove any existing .container styles and replace with this: */
-/* #logo {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-} */
-
-/* #logo img {
-  width: 100%;
-} */
-
-/* Menu link styles */
-/* #menu {
-  margin-left: 150px;} /* Dostosuj wartość marginesu, aby umieścić menu obok logo */
-
-/* #menu a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-} */
-
-#content {
+body {
+  font-family: garet, sans-serif;
+  background-color: #000000;
+  color: #fff;
   display: flex;
-  margin-top: 198px;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 50vh;
-}
-@keyframes fadeInUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  margin: 0;
+  padding: 0.5rem; /* Podstawowe padding dla smartfonów */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.main-section .heading {
+  margin-left: 1rem;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-wrap: wrap;
+  overflow: hidden;
+  margin-bottom: -2rem;
+  font-size: 3rem;
 }
 
 .main-heading {
-  font-size: 90px;
-  margin-top: 5rem;
+  font-size: 3rem;
+  margin-top: 2rem;
 }
 
 .sub-heading {
-  font-size: 24px;
-  margin-bottom: 3rem;
+  font-size: 18px;
+  margin-bottom: 1.5rem;
 }
 
-.join-button {
+.join-button,
+.course-button {
   background-color: #000000;
-  width: 180px;
+  width: 60%;
+  font-size: 1.5rem;
   color: #ffffff;
-  padding: 24px;
-  line-height: 0px;
+  padding: 1rem;
+  line-height: 2.5rem;
   text-decoration: none;
   display: inline-block;
-  margin-bottom: 2rem;
   font-weight: bold;
   border: solid;
   border-color: #e5e900;
   cursor: pointer;
   display: grid;
   place-content: center;
-  margin-top: 30px;
+  margin-bottom: 3rem;
+  margin-left: 1rem;
 }
 
-.join-button:hover {
-  opacity: 0.8; /* 30% opacity po najechaniu */
-}
-
-.join-button:active {
-  background-color: #e5e900; /* Zmiana koloru po kliknięciu */
-}
-
-/* Images container */
 .images-container {
-  height: 120%;
-}
-
-.main-section {
-  margin-left: 24px;
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 800px;
-  text-wrap: wrap;
-  overflow: hidden;
+  display: flex; /* Dodane */
+  justify-content: flex-end; /* Dodane */
+  width: 100%; /* Dodane */
 }
 
 .python-image {
-  max-width: 120%;
-  max-height: 120%;
-  object-fit: contain;
-  margin-right: 120px;
+  margin: 0;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: 2rem;
 }
 
-/* Social media styles */
 .social-media {
+  flex-direction: column;
   text-align: center;
   padding: 1rem 0;
   display: flex;
@@ -123,7 +81,7 @@
 
 .horizontal {
   display: block;
-  width: 200px;
+  width: 15%;
   height: 2px;
   background-color: #fff;
 }
@@ -131,84 +89,140 @@
 .social-icons {
   display: flex;
   gap: 8px;
+  margin-top: 0.7rem;
 }
 
 .social-link {
-  height: 36px;
+  height: 3rem;
 }
 .social-link img {
   max-height: 100%;
   object-fit: contain;
 }
 
-/* Zastosuj animacje do elementów */
-.main-heading, .sub-heading {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.join-button {
-  animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 0.5s; /* Lekkie opóźnienie, aby animacja była płynna i sekwencyjna */
-}
-
-.python-image {
-  animation: fadeIn 1.2s ease-out forwards;
-  animation-delay: 1s; /* Zwiększone opóźnienie dla obrazu */
-}
-
 .social-icons a {
-  animation: fadeInUp 1.2s ease-out forwards;
-  animation-delay: 1.2s; /* Animacja ikon mediów społecznościowych */
+  font-size: 24px;
+  margin: 0 8px;
 }
 
-/* Początkowe stany elementów przed animacją */
-.main-heading, .sub-heading, .join-button, .python-image, .social-icons a {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@media (max-width: 768px) {
-  #content {
-    flex-direction: column; /* Układ elementów jeden pod drugim */
-    align-items: center; /* Centrowanie elementów */
-    margin-top: 100px; /* Zmniejszenie marginesu górnego */
+@media (min-width: 400px) {
+  body {
+    padding: 1rem; /* Dostosowane padding dla tabletów */
   }
 
   .main-heading {
-    font-size: 48px; /* Zmniejszenie rozmiaru czcionki dla nagłówka */
-    margin-top: 2rem; /* Dostosowanie marginesu górnego */
+    font-size: 4rem;
   }
 
   .sub-heading {
-    font-size: 18px; /* Zmniejszenie rozmiaru czcionki dla podtytułu */
-    margin-bottom: 1.5rem; /* Dostosowanie marginesu dolnego */
+    font-size: 20px;
   }
 
-  .join-button, .course-button {
-    width: auto; /* Dostosowanie szerokości przycisków */
-    padding: 12px 24px; /* Zmniejszenie paddingu */
-    font-size: 16px; /* Zmniejszenie rozmiaru czcionki */
-    margin: 1rem 0; /* Dostosowanie marginesów */
-  }
-
-  .python-image {
-    max-width: 100%; /* Dostosowanie maksymalnej szerokości obrazu */
-    max-height: auto; /* Dostosowanie wysokości */
-    margin-right: 0; /* Usunięcie marginesu prawego */
-  }
-
-  .social-icons a {
-    font-size: 24px; /* Dostosowanie rozmiaru ikon */
-    margin: 0 8px; /* Zmniejszenie odstępów między ikonami */
-  }
-
-  .social-media {
-    flex-direction: column; /* Zmiana układu ikon na pionowy */
-    gap: 10px; /* Zmniejszenie odstępu */
-  }
-  
   .horizontal {
-    margin: 10px 0; /* Dostosowanie marginesów dla linii */
+    width: 20%;
   }
 }
 
+@media (min-width: 768px) {
+  body {
+    padding: 2rem; /* Dostosowane padding dla komputerów */
+  }
+
+  .main-heading {
+    font-size: 5rem;
+  }
+
+  .sub-heading {
+    font-size: 24px;
+  }
+
+  .horizontal {
+    width: 25%;
+  }
+
+  .images-container {
+    margin-right: auto;
+  }
+
+  .join-button,
+  .course-button {
+    width: 40%;
+    font-size: 2rem;
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+  .python-image {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .join-button,
+  .course-button {
+    width: 40%;
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  #content {
+    width: 90%; /* Ustaw szerokość na 100% rodzica */
+    margin-left: 0; /* Upewnij się, że nie ma marginesu po lewej stronie */
+    padding: 1rem; /* Upewnij się, że nie ma paddingu wpływającego na szerokość */
+  }
+
+  body {
+    font-family: garet, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem; /* Podstawowe padding dla smartfonów */
+  }
+
+  .main-section {
+    margin-top: 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .images-container {
+    position: relative; /* Dodane */
+  }
+
+  .python-image {
+    max-width: 50%;
+    position: relative; /* Dodane */
+    top: -20rem; /* Dostosuj wartość, aby podnieść obrazek */
+  }
+
+  .join-button,
+  .course-button {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    width: 25%;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  .social-media {
+    flex-direction: row;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: relative; /* Dodane */
+    top: -8rem;
+  }
+
+  .social-icons {
+    gap: 8px;
+    margin-top: 0.2rem;
+  }
+}
