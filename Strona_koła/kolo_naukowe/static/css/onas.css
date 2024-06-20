@@ -1,12 +1,21 @@
 .describe {
+<<<<<<< HEAD
   display: flex; /* Ustawienie trzech kolumn obok siebie */
   justify-content: center;
   margin-top: 100px;
   width: 100%; /* Pełna szerokość dla responsywności */
+=======
+  display: flex;
+  flex-direction: column; /* Stack columns vertically for smaller devices */
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%;
+>>>>>>> 1213a7c2231562a9baa0c86f673c900dc4e19395
   margin-left: auto;
   margin-right: auto;
   overflow-wrap: break-word;
   text-align: justify;
+<<<<<<< HEAD
 }
 
 .column {
@@ -78,5 +87,100 @@
   object-fit: contain;
 }
 
+=======
+}
+
+.column {
+  flex: 1;
+  margin: 10px; /* Equal margins on all sides */
+  opacity: 0;
+  animation: slideIn 1.5s forwards;
+  animation-delay: 0s;
+}
+
+.column-header {
+  color: rgb(225, 231, 69);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.describe p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.roles {
+  margin-top: 5px;
+}
+
+.roles p {
+  margin-bottom: 5px;
+}
+
+.roles.leadership p:last-child,
+.roles.assistant p:last-child {
+  margin-bottom: 5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.python-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .describe {
+    flex-direction: row; /* Display columns horizontally for larger screens */
+  }
+
+  .column {
+    margin: 0 10px; /* Horizontal margins for spacing between columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .describe p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .describe p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+>>>>>>> 1213a7c2231562a9baa0c86f673c900dc4e19395
 }
 
