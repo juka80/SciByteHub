@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-iold984t=g4dn)h3$n6493f97mj#8-g&&!w%_#g#wfy#w&3v3*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["scibytehub.chem.ug.edu.pl","localhost"]
 

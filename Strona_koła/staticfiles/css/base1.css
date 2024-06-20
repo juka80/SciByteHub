@@ -1,0 +1,141 @@
+@import url("https://fonts.cdnfonts.com/css/garet");
+@import url("https://fonts.cdnfonts.com/css/telegraf");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: telegraf, sans-serif;
+  background-color: #000000;
+  color: #fff;
+  padding: 0 36px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+#logo {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  text-decoration: none; /* Usuwa podkreślenie z linku */
+  position: fixed;
+  top: 16px;
+  left: 24px;
+}
+
+#logo img {
+  max-height: 15vh; /* Maksymalna wysokość logo jako procent wysokości viewportu */
+  width: auto; /* Szerokość automatyczna, aby zachować proporcje */
+}
+
+#logo span {
+  color: white; /* Ustawia biały kolor tekstu */
+  margin-left: 2%; /* Odstęp między logiem a tekstem */
+  font-family: "Garet", sans-serif; /* Określa czcionkę dla tekstu */
+  font-size: 3vh; /* Wielkość tekstu jako procent wysokości viewportu */
+  white-space: nowrap; /*1 Zapobiega przenoszeniu tekstu do nowej linii */
+}
+
+#logo span:hover {
+  opacity: 0.8; /* Zmniejszenie przejrzystości po najechaniu */
+}
+
+#logo span:active {
+  color: #e5e900; /* Zmiana koloru po kliknięciu */
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  justify-content: center; /* Tutaj używamy space-between, aby rozłożyć linki równomiernie */
+  width: 100%;
+  margin-top: 68px;
+}
+
+#menu a {
+  text-decoration: none;
+  font-size: 28px;
+  color: #ffffff;
+  padding: 0 5%; /* To doda odstęp z lewej i prawej strony każdego linku */
+  font-weight: bold;
+}
+
+#menu a:hover {
+  opacity: 0.8; /* Zmniejszenie przejrzystości po najechaniu */
+}
+
+#menu a:active {
+  color: #e5e900; /* Zmiana koloru po kliknięciu */
+}
+
+.plant-image {
+  object-fit: contain;
+  max-width: 100%;
+}
+.plant-image-container {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  margin-right: -24px;
+  width: 250px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px; /* Zmniejszony padding dla całego ciała dokumentu */
+  }
+
+  #logo {
+    top: 10px;
+    left: 10px;
+  }
+
+  #logo img {
+    max-height: 10vh; /* Zmniejszenie wysokości logo */
+  }
+
+  #logo span {
+    font-size: 2.5vh; /* Zmniejszenie rozmiaru czcionki dla nazwy */
+  }
+
+  #menu {
+    flex-direction: column; /* Zmiana układu menu na pionowy */
+    gap: 20px; /* Zmniejszenie odstępu między linkami */
+    margin-top: 50px; /* Dostosowanie marginesu górnego */
+    padding-top: 60px; /* Dostosowanie paddingu górnego, aby nie nakładać się na logo */
+  }
+
+  #menu a {
+    font-size: 24px; /* Zmniejszenie rozmiaru czcionki dla linków w menu */
+    padding: 10px 0; /* Dostosowanie paddingu dla lepszej czytelności na urządzeniach mobilnych */
+  }
+
+  .plant-image-container {
+    width: 100px; /* Zmniejszenie szerokości kontenera obrazu */
+    margin-right: 0; /* Usunięcie marginesu prawego */
+    top: auto;
+    bottom: 20px; /* Pozycjonowanie obrazu w dolnej części ekranu */
+  }
+
+  .plant-image {
+    max-width: 100%; /* Dostosowanie maksymalnej szerokości obrazu */
+  }
+
+  .container {
+    flex-direction: column; /* Układ elementów jeden pod drugim dla kontenera głównego */
+    align-items: flex-start; /* Wyrównanie elementów do lewej */
+  }
+}
+
