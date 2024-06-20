@@ -1,106 +1,104 @@
-/* Importing Google Fonts for better typography */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
-/* General Body Style */
-body {
-  font-family: "Roboto", sans-serif;
-  color: #f0f0f0;
-  background-color: #121212;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* Header Style */
-header {
-  background-color: #1e1e1e;
-  padding: 15px; /* Increased padding for better touch targets */
-  text-align: center;
-}
-
-/* Navigation Style */
-nav {
-  margin: 10px 0;
-  text-align: center;
-}
-
-nav a {
-  display: inline-block; /* Ensures proper alignment */
-  color: #9acd32;
-  text-decoration: none;
-  padding: 10px 15px; /* Increased padding for better touch targets */
-  font-size: 18px; /* Larger font size for readability */
-}
-
-/* Responsive navigation links */
-@media (max-width: 768px) {
-  nav a {
-    font-size: 16px; /* Adjust font size for smaller screens */
-    padding: 8px 10px;
-  }
-}
-
-/* Section Container Style */
 .describe {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Stack columns vertically for smaller devices */
   justify-content: center;
-  margin: 20px;
+  margin-top: 100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+  text-align: justify;
 }
 
-/* Adjust layout for smaller screens */
-@media (max-width: 768px) {
-  .describe {
-    flex-direction: column; /* Stack sections vertically */
+.column {
+  flex: 1;
+  margin: 10px; /* Equal margins on all sides */
+  opacity: 0;
+  animation: slideIn 1.5s forwards;
+  animation-delay: 0s;
+}
+
+.column-header {
+  color: rgb(225, 231, 69);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-/* Column Style */
-.column {
-  background-color: #222;
-  padding: 20px;
-  margin: 10px; /* Increased margin for better spacing */
-  box-sizing: border-box;
-  border-radius: 8px;
-  flex: 1 1 100%; /* Full width on smaller screens */
-}
-
-/* Headings Style */
-h1,
-h2 {
-  color: #76b947;
-  font-size: 24px; /* Increased font size for visibility */
+.describe p {
+  font-size: 20px;
+  line-height: 1.8;
   margin-bottom: 15px;
 }
 
-/* Paragraph Style */
-p {
-  font-size: 16px; /* Increased font size for readability */
-  line-height: 1.6;
-  margin-bottom: 15px;
+.roles {
+  margin-top: 5px;
 }
 
-/* Further adjustments for very small screens */
-@media (max-width: 500px) {
-  header,
-  nav a,
-  h1,
-  h2,
-  p {
-    font-size: 14px; /* Further reduce font size on smallest screens */
+.roles p {
+  margin-bottom: 5px;
+}
+
+.roles.leadership p:last-child,
+.roles.assistant p:last-child {
+  margin-bottom: 5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.python-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .describe {
+    flex-direction: row; /* Display columns horizontally for larger screens */
   }
 
   .column {
-    padding: 15px;
-    margin: 5px;
+    margin: 0 10px; /* Horizontal margins for spacing between columns */
   }
 }
 
-/* Footer Style */
-footer {
-  background-color: #1e1e1e;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px; /* Adjusted for consistency */
+@media (max-width: 768px) {
+  .describe p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .describe p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
 }
